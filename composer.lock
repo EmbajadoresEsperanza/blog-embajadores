@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "39f7ff06a3b4a435173699a488bfa64d",
+    "content-hash": "cca0c5b0cb1ad0f509ce0ca83cd9e2fc",
     "packages": [
         {
             "name": "akaunting/laravel-money",
@@ -762,12 +762,12 @@
             "version": "v2.17.8",
             "source": {
                 "type": "git",
-                "url": "https://github.com/filamentphp/app.git",
+                "url": "https://github.com/filamentphp/panels.git",
                 "reference": "376ca6418cba9ffb3b2e29e4bd462233d883805f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filamentphp/app/zipball/376ca6418cba9ffb3b2e29e4bd462233d883805f",
+                "url": "https://api.github.com/repos/filamentphp/panels/zipball/376ca6418cba9ffb3b2e29e4bd462233d883805f",
                 "reference": "376ca6418cba9ffb3b2e29e4bd462233d883805f",
                 "shasum": ""
             },
@@ -9414,5 +9414,5 @@
         "php": "^8.1"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }
