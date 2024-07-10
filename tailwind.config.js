@@ -13,6 +13,11 @@ module.exports = {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            colors: {
+                'blue-600': 'orange',
+                'orange-600': '#ed8936',
+                // Otros colores personalizados si los tienes
+            },
         },
     },
 

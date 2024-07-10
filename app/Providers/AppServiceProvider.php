@@ -26,7 +26,7 @@ class AppServiceProvider extends ServiceProvider
                 NavigationItem::make('eeici.com')
                     ->url('https://eeici.com/', shouldOpenInNewTab: true)
                     ->icon('heroicon-o-globe-alt')
-                    ->group('Content Creator')
+                    ->group('Official website')
                     ->sort(3),
             ]);
         });

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ $metaTitle ?: 'TheCodeholic Blog' }}</title>
+    <title>EmbajadoresEsperanza Blog</title>
     <meta name="author" content="TheCodeholic">
     <meta name="description" content="{{ $metaDescription }}">
 
@@ -23,10 +23,10 @@
 
 
 <!-- Text Header -->
-<header class="w-full container mx-auto">
+<header class="container w-full mx-auto">
     <div class="flex flex-col items-center py-12">
-        <a class="font-bold text-gray-800 uppercase hover:text-gray-700 text-5xl" href="{{route('home')}}">
-            TheCodeholic Blog
+        <a class="text-5xl font-bold text-gray-800 uppercase hover:text-gray-700" href="{{route('home')}}">
+            <img src="{{ asset('/images/logo.png') }}" style="height: 200px !important; width:400px !important;"> Emabajdores Blog
         </a>
         <p class="text-lg text-gray-600">
             {{ \App\Models\TextWidget::getTitle('header') }}
@@ -35,26 +35,29 @@
 </header>
 
 <!-- Topic Nav -->
-<nav class="w-full py-4 border-t border-b bg-gray-100" x-data="{ open: false }">
+<nav class="w-full py-4 bg-gray-100 border-t border-b" x-data="{ open: false }">
     <div class="block sm:hidden">
         <a
             href="#"
-            class="block md:hidden text-base font-bold uppercase text-center flex justify-center items-center"
+            class="flex items-center justify-center block text-base font-bold text-center uppercase md:hidden"
             @click="open = !open"
         >
-            Topics <i :class="open ? 'fa-chevron-down': 'fa-chevron-up'" class="fas ml-2"></i>
+            Topics <i :class="open ? 'fa-chevron-down': 'fa-chevron-up'" class="ml-2 fas"></i>
         </a>
     </div>
-    <div :class="open ? 'block': 'hidden'" class="w-full flex-grow sm:flex sm:items-center sm:w-auto">
+    <div :class="open ? 'block': 'hidden'" class="flex-grow w-full sm:flex sm:items-center sm:w-auto">
         <div
-            class="w-full container mx-auto flex flex-col sm:flex-row items-center justify-between text-sm font-bold uppercase mt-0 px-6 py-2">
+            class="container flex flex-col items-center justify-between w-full px-6 py-2 mx-auto mt-0 text-sm font-bold uppercase sm:flex-row">
             <div>
-                <a href="{{route('home')}}" class="hover:bg-blue-600 hover:text-white rounded py-2 px-4 mx-2">Home</a>
+                <a href="{{route('home')}}" class="px-4 py-2 mx-2 rounded hover:text-white" onmouseover="this.style.backgroundColor='orange';"
+                onmouseout="this.style.backgroundColor='white';">Home</a>
                 @foreach($categories as $category)
                     <a href="{{route('by-category', $category)}}"
-                       class="hover:bg-blue-600 hover:text-white rounded py-2 px-4 mx-2">{{$category->title}}</a>
+                       class="px-4 py-2 mx-2 rounded hover:text-black"  onmouseover="this.style.backgroundColor='orange';"
+                       onmouseout="this.style.backgroundColor='transparentwhite';">{{$category->title}}</a>
                 @endforeach
-                <a href="{{route('about-us')}}" class="hover:bg-blue-600 hover:text-white rounded py-2 px-4 mx-2">About
+                <a href="{{route('about-us')}}" class="px-4 py-2 mx-2 rounded hover:text-white" onmouseover="this.style.backgroundColor='orange';"
+                onmouseout="this.style.backgroundColor='transparent';">About
                     us</a>
             </div>
 
@@ -69,11 +72,11 @@
                         <x-dropdown align="right" width="48">
                             <x-slot name="trigger">
                                 <button
-                                    class="hover:bg-blue-600 hover:text-white flex items-center rounded py-2 px-4 mx-2">
+                                    class="flex items-center px-4 py-2 mx-2 rounded hover:bg-orange-600 hover:text-white">
                                     <div>{{ Auth::user()->name }}</div>
 
                                     <div class="ml-1">
-                                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+                                        <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg"
                                              viewBox="0 0 20 20">
                                             <path fill-rule="evenodd"
                                                   d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
@@ -103,8 +106,9 @@
                     </div>
                 @else
                     <a href="{{route('login')}}"
-                       class="hover:bg-blue-600 hover:text-white rounded py-2 px-4 mx-2">Login</a>
-                    <a href="{{route('register')}}" class="bg-blue-600 text-white rounded py-2 px-4 mx-2">Register</a>
+                       class="px-4 py-2 mx-2 rounded hover:text-black" onmouseover="this.style.backgroundColor='orange';"
+                       onmouseout="this.style.backgroundColor='white';">Login</a>
+                    <a href="{{route('register')}}" class="px-4 py-2 mx-2 text-black rounded" style="background-color:orange !important;">Register</a>
                 @endauth
             </div>
         </div>
@@ -112,15 +116,15 @@
 </nav>
 
 
-<div class="container mx-auto py-6">
+<div class="container py-6 mx-auto">
 
     {{ $slot }}
 
 </div>
 
-<footer class="w-full border-t bg-white pb-12">
-    <div class="w-full container mx-auto flex flex-col items-center">
-        <div class="uppercase py-6">&copy; myblog.com</div>
+<footer class="w-full pb-12 bg-white border-t">
+    <div class="container flex flex-col items-center w-full mx-auto">
+        <div class="py-6 uppercase">&copy; eeici.com</div>
     </div>
 </footer>
 
