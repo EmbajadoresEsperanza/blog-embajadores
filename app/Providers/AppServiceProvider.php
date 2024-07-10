@@ -23,8 +23,8 @@ class AppServiceProvider extends ServiceProvider
     {
         Filament::serving(function () {
             Filament::registerNavigationItems([
-                NavigationItem::make('thecodeholic.com')
-                    ->url('https://thecodeholic.com', shouldOpenInNewTab: true)
+                NavigationItem::make('eeici.com')
+                    ->url('https://eeici.com/', shouldOpenInNewTab: true)
                     ->icon('heroicon-o-globe-alt')
                     ->group('Content Creator')
                     ->sort(3),
