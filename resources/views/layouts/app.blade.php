@@ -50,15 +50,15 @@
             class="container flex flex-col items-center justify-between w-full px-6 py-2 mx-auto mt-0 text-sm font-bold uppercase sm:flex-row">
             <div>
                 <a href="{{route('home')}}" class="px-4 py-2 mx-2 rounded hover:text-white" onmouseover="this.style.backgroundColor='orange';"
-                onmouseout="this.style.backgroundColor='white';">Home</a>
+                onmouseout="this.style.backgroundColor='white';">Inicio</a>
                 @foreach($categories as $category)
                     <a href="{{route('by-category', $category)}}"
                        class="px-4 py-2 mx-2 rounded hover:text-black"  onmouseover="this.style.backgroundColor='orange';"
                        onmouseout="this.style.backgroundColor='transparentwhite';">{{$category->title}}</a>
                 @endforeach
                 <a href="{{route('about-us')}}" class="px-4 py-2 mx-2 rounded hover:text-white" onmouseover="this.style.backgroundColor='orange';"
-                onmouseout="this.style.backgroundColor='transparent';">About
-                    us</a>
+                onmouseout="this.style.backgroundColor='transparent';">Sobre nosotros
+                    </a>
             </div>
 
             <div class="flex items-center">
@@ -88,7 +88,7 @@
 
                             <x-slot name="content">
                                 <x-dropdown-link :href="route('profile.edit')">
-                                    {{ __('Profile') }}
+                                    {{ __('Perfil') }}
                                 </x-dropdown-link>
 
                                 <!-- Authentication -->
@@ -98,7 +98,7 @@
                                     <x-dropdown-link :href="route('logout')"
                                                      onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                                        {{ __('Log Out') }}
+                                        {{ __('Cerrar sesión') }}
                                     </x-dropdown-link>
                                 </form>
                             </x-slot>
